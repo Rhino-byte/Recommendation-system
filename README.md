@@ -1,6 +1,16 @@
 # Recommendation-system
 Recommendation system
-Authors:Savins,Noel,Linet,Imran & Anthony
+Authors:
+[Noel Christopher](https://github.com/NOE0464) 
+
+[Savins Nanyaemuny](https://github.com/Rhino-byte)
+
+[Anthony Ekeno](https://github.com/sananthonio)
+
+[Linet Lydia](https://github.com/LinetLydia)
+
+[Imran Mahfoudh](https://github.com/malvadaox)
+
 # Business Understanding
 In a data-driven world, businesses aim to personalize user experiences to boost engagement, satisfaction, and revenue. For a movie streaming platform, a recommendation system can provide tailored suggestions based on user preferences and behavior. This project focuses on building a movie recommender system using collaborative filtering, matrix factorization, and a hybrid model to enhance recommendation quality and precision, ultimately improving user experience and platform engagement.
 
@@ -21,23 +31,23 @@ The movie streaming platform needs a recommendation system to:
 # Objectives
 Collaborative Filtering: Develop a model that recommends movies based on user-item interactions, such as ratings and viewing history.
 
-- Matrix Factorization: Apply techniques like Singular Value Decomposition (SVD) to uncover latent factors in user-movie relationships, improving predictions.
+- **Matrix Factorization:** Apply techniques like Singular Value Decomposition (SVD) to uncover latent factors in user-movie relationships, improving predictions.
 
-- Hybrid Model: Combine collaborative filtering and matrix factorization to leverage the strengths of both approaches, improving recommendation accuracy and coverage.
+- **Hybrid Model:** Combine collaborative filtering and matrix factorization to leverage the strengths of both approaches, improving recommendation accuracy and coverage.
 
--Cold Start Problem: Address challenges of recommending movies to new users and suggesting newly added movies with limited data. -Performance Optimization: Ensure the system is scalable and capable of providing real-time, personalized recommendations.
+- **Cold Start Problem:** Address challenges of recommending movies to new users and suggesting newly added movies with limited data. -Performance Optimization: Ensure the system is scalable and capable of providing real-time, personalized recommendations.
 
--Model Evaluation: Measure and compare model effectiveness using precision, recall, Accuracy and NDCG to evaluate the accuracy of the recommendations
+- **Model Evaluation:** Measure and compare model effectiveness using precision, recall, Accuracy and NDCG to evaluate the accuracy of the recommendations
 # Success Criteria
-- Improved Accuracy: The hybrid model should outperform collaborative filtering and matrix factorization methods in terms of precision, recall, and user satisfaction.
+1. Improved Accuracy: The hybrid model should outperform collaborative filtering and matrix factorization methods in terms of precision, recall, and user satisfaction.
 
-- Cold Start Handling: The system should offer meaningful recommendations for new users and movies with minimal performance drop.
+2. Cold Start Handling: The system should offer meaningful recommendations for new users and movies with minimal performance drop.
 
-- Scalability: The recommendation system must scale efficiently as the platform grows, ensuring responsiveness even as the number of users and movies increases.
+3. Scalability: The recommendation system must scale efficiently as the platform grows, ensuring responsiveness even as the number of users and movies increases.
 
-- Increased Engagement: There should be a measurable increase in user interactions with recommended movies (e.g., views, ratings, or watch time).
+4. Increased Engagement: There should be a measurable increase in user interactions with recommended movies (e.g., views, ratings, or watch time).
 
-- Business Impact: The system should contribute to key business metrics such as increased subscriptions, user retention, and overall revenue.
+5. Business Impact: The system should contribute to key business metrics such as increased subscriptions, user retention, and overall revenue.
 
 # Reasons and Importance of Models
 ## Collaborative Filtering:
@@ -48,54 +58,54 @@ Collaborative Filtering: Develop a model that recommends movies based on user-it
 ### Matrix Factorization:
 **Reason:** Matrix factorization techniques like Singular Value Decomposition (SVD) decompose the user-movie interaction matrix into latent factors, revealing hidden relationships between users and movies.
 
--Importance: It enables the system to make better predictions, especially in sparse datasets (where many user-movie interactions are missing), enhancing recommendation accuracy.`
+**Importance:** It enables the system to make better predictions, especially in sparse datasets (where many user-movie interactions are missing), enhancing recommendation accuracy.`
 
 ####  Hybrid Model:
--Reason: A hybrid model combines the strengths of both collaborative filtering and matrix factorization to overcome their individual weaknesses, such as the cold start problem in collaborative filtering.
+**Reason:** A hybrid model combines the strengths of both collaborative filtering and matrix factorization to overcome their individual weaknesses, such as the cold start problem in collaborative filtering.
 
--Importance: Hybrid models improve recommendation robustness by integrating multiple techniques, ensuring more diverse and accurate movie recommendations across different user profiles.
+**Importance:** Hybrid models improve recommendation robustness by integrating multiple techniques, ensuring more diverse and accurate movie recommendations across different user profiles.
 
 By utilizing these models, the movie recommender system will be more effective, engaging, and scalable, ultimately leading to a better user experience and helping the platform achieve its key business goals
 # Data understanding
 
 ## MOVIE-dataset
--Data Overview: The dataset contains 9,742 rows and 3 columns: movieId (integer), title (string), and genres (string). All columns have non-null values, with movieId being unique for each entry.
+- Data Overview: The dataset contains 9,742 rows and 3 columns: movieId (integer), title (string), and genres (string). All columns have non-null values, with movieId being unique for each entry.
 
--Summary Statistics: The movieId values range from 1 to 193,609, with a mean value of 42,200, and the most frequent genre is "Drama" (appearing 1,053 times). The dataset has minimal missing data, and the most common movie title is "Confessions of a Dangerous Mind (2002)" which appears twice.
+- Summary Statistics: The movieId values range from 1 to 193,609, with a mean value of 42,200, and the most frequent genre is "Drama" (appearing 1,053 times). The dataset has minimal missing data, and the most common movie title is "Confessions of a Dangerous Mind (2002)" which appears twice.
 
--Shape and Uniqueness: The dataset has a shape of (9742, 3), with movieId containing 9742 unique values, title having 9737 unique values (indicating some duplicate titles), and genres having 951 unique genre types.
+- Shape and Uniqueness: The dataset has a shape of (9742, 3), with movieId containing 9742 unique values, title having 9737 unique values (indicating some duplicate titles), and genres having 951 unique genre types.
 
--No Duplicates: There are no duplicate movieId values in the dataset, but some movie titles are repeated, suggesting potential cases where the same movie appears with slightly different versions or formats.
+- No Duplicates: There are no duplicate movieId values in the dataset, but some movie titles are repeated, suggesting potential cases where the same movie appears with slightly different versions or formats.
 
 # RATINGS-dataset
- -Data Overview: The ratings dataset contains 100,836 rows and 4 columns: userId (integer), movieId (integer), rating (float), and timestamp (integer). All columns have non-null values, and the data is structured to track movie ratings by users.
+- Data Overview: The ratings dataset contains 100,836 rows and 4 columns: userId (integer), movieId (integer), rating (float), and timestamp (integer). All columns have non-null values, and the data is structured to track movie ratings by users.
 
--Summary Statistics: The userId ranges from 1 to 610, with a mean value of 326, and the movieId spans from 1 to 193,609, covering a wide range of movies. The average rating is 3.5 (on a 1-5 scale), and the most frequent timestamp corresponds to the period around 1.2 billion seconds since January 1970.
+- Summary Statistics: The userId ranges from 1 to 610, with a mean value of 326, and the movieId spans from 1 to 193,609, covering a wide range of movies. The average rating is 3.5 (on a 1-5 scale), and the most frequent timestamp corresponds to the period around 1.2 billion seconds since January 1970.
 
--Shape and Uniqueness: The dataset has a shape of (100836, 4), with userId containing 610 unique values, movieId containing 9,724 unique movie identifiers, and rating having 10 possible unique rating values. The timestamp column has 85,043 unique values, showing a diverse set of rating times.
+- Shape and Uniqueness: The dataset has a shape of (100836, 4), with userId containing 610 unique values, movieId containing 9,724 unique movie identifiers, and rating having 10 possible unique rating values. The timestamp column has 85,043 unique values, showing a diverse set of rating times.
 
--No Duplicates: There are no duplicate rows in the dataset, ensuring that each rating is unique for a given userId and movieId combination, although there may be multiple ratings by the same user for different movies.
+- No Duplicates: There are no duplicate rows in the dataset, ensuring that each rating is unique for a given userId and movieId combination, although there may be multiple ratings by the same user for different movies.
 # Data Cleaning
 Missing values and duplicated rows are handled. Also, columns irrelevant to the project are dropped. Formatting of columns and their contents for smooth analysis.
 # Data Merging
-¶
--ratings and movies, is merged on the movieId column using an inner join.
 
--An inner join was used to merge the two DataFrames based on movieId, ensuring only movies that have both ratings and metadata (title/genres) are included, excluding entries with missing data in either DataFrame.
+- ratings and movies, is merged on the movieId column using an inner join.
 
--Shape: The resulting DataFrame has 100,836 entries and 6 columns.
+- An inner join was used to merge the two DataFrames based on movieId, ensuring only movies that have both ratings and metadata (title/genres) are included, excluding entries with missing data in either DataFrame.
 
--Columns: contains columns: userId, movieId, rating, timestamp, title, and genres.
+- Shape: The resulting DataFrame has 100,836 entries and 6 columns.
 
--Data Types: The columns contain data types: int64 for identifiers, float64 for ratings, and object for movie title and genres.
+- Columns: contains columns: userId, movieId, rating, timestamp, title, and genres.
 
--Summary Statistics: Basic descriptive statistics show mean ratings of 3.5, with a rating range from 0.5 to 5.
+- Data Types: The columns contain data types: int64 for identifiers, float64 for ratings, and object for movie title and genres.
 
--Value Counts: 100,836 entries, each representing a unique rating event, with a mix of ratings across various movies and genres.
+- Summary Statistics: Basic descriptive statistics show mean ratings of 3.5, with a rating range from 0.5 to 5.
 
--Unique Entries: The data includes various combinations of userId, movieId, rating, and timestamp for different movies, showing no duplicates or repeated entries.
+- Value Counts: 100,836 entries, each representing a unique rating event, with a mix of ratings across various movies and genres.
 
--Duplicated Entries: no duplicated rows
+- Unique Entries: The data includes various combinations of userId, movieId, rating, and timestamp for different movies, showing no duplicates or repeated entries.
+
+- Duplicated Entries: no duplicated rows
 # DataSAnalysis; visaualisations
 a)General Top-rated genres are Action, comedy and drama
 ![alt text](image1.png)
