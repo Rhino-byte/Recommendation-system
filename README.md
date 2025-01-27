@@ -12,6 +12,8 @@ Authors:
 
 [Imran Mahfoudh](https://github.com/malvadaox)
 
+![Cinema - 30x40cm _ No frame](https://github.com/user-attachments/assets/4d9dcbd8-8e2e-49ff-baa2-fef524bb5bc4)
+
 # Business Understanding
 In a data-driven world, businesses aim to personalize user experiences to boost engagement, satisfaction, and revenue. For a movie streaming platform, a recommendation system can provide tailored suggestions based on user preferences and behavior. This project focuses on building a movie recommender system using collaborative filtering, matrix factorization, and a hybrid model to enhance recommendation quality and precision, ultimately improving user experience and platform engagement.
 
