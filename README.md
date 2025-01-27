@@ -9,44 +9,44 @@ How can we build a recommendation system to provide personalized movie suggestio
 # Problem Statement
 The movie streaming platform needs a recommendation system to:
 
--Develop a robust recommendation system that utilizes user and item interactions (ratings) and metadata (genres) to predict user preferences and generate personalized movie recommendations.
+- Develop a robust recommendation system that utilizes user and item interactions (ratings) and metadata (genres) to predict user preferences and generate personalized movie recommendations.
 
--Enhance customer satisfaction and retention by providing personalized movie suggestions.
+- Enhance customer satisfaction and retention by providing personalized movie suggestions.
 
--Increase user engagement, conversion rates, and platform revenue.
+- Increase user engagement, conversion rates, and platform revenue.
 
--Address the "cold start problem" for new users and movies with limited interaction data.
+- Address the "cold start problem" for new users and movies with limited interaction data.
 
--Overcome the limitations of current recommendation methods in capturing the dynamics between users and movies, ensuring recommendations are relevant and diverse. The system must balance accuracy, scalability, and real-time processing to deliver seamless recommendations
+- Overcome the limitations of current recommendation methods in capturing the dynamics between users and movies, ensuring recommendations are relevant and diverse. The system must balance accuracy, scalability, and real-time processing to deliver seamless recommendations
 # Objectives
 Collaborative Filtering: Develop a model that recommends movies based on user-item interactions, such as ratings and viewing history.
 
--Matrix Factorization: Apply techniques like Singular Value Decomposition (SVD) to uncover latent factors in user-movie relationships, improving predictions.
+- Matrix Factorization: Apply techniques like Singular Value Decomposition (SVD) to uncover latent factors in user-movie relationships, improving predictions.
 
--Hybrid Model: Combine collaborative filtering and matrix factorization to leverage the strengths of both approaches, improving recommendation accuracy and coverage.
+- Hybrid Model: Combine collaborative filtering and matrix factorization to leverage the strengths of both approaches, improving recommendation accuracy and coverage.
 
 -Cold Start Problem: Address challenges of recommending movies to new users and suggesting newly added movies with limited data. -Performance Optimization: Ensure the system is scalable and capable of providing real-time, personalized recommendations.
 
 -Model Evaluation: Measure and compare model effectiveness using precision, recall, Accuracy and NDCG to evaluate the accuracy of the recommendations
 # Success Criteria
--Improved Accuracy: The hybrid model should outperform collaborative filtering and matrix factorization methods in terms of precision, recall, and user satisfaction.
+- Improved Accuracy: The hybrid model should outperform collaborative filtering and matrix factorization methods in terms of precision, recall, and user satisfaction.
 
--Cold Start Handling: The system should offer meaningful recommendations for new users and movies with minimal performance drop.
+- Cold Start Handling: The system should offer meaningful recommendations for new users and movies with minimal performance drop.
 
--Scalability: The recommendation system must scale efficiently as the platform grows, ensuring responsiveness even as the number of users and movies increases.
+- Scalability: The recommendation system must scale efficiently as the platform grows, ensuring responsiveness even as the number of users and movies increases.
 
--Increased Engagement: There should be a measurable increase in user interactions with recommended movies (e.g., views, ratings, or watch time).
+- Increased Engagement: There should be a measurable increase in user interactions with recommended movies (e.g., views, ratings, or watch time).
 
--Business Impact: The system should contribute to key business metrics such as increased subscriptions, user retention, and overall revenue.
+- Business Impact: The system should contribute to key business metrics such as increased subscriptions, user retention, and overall revenue.
 
 # Reasons and Importance of Models
 ## Collaborative Filtering:
--Reason: Collaborative filtering leverages historical user-item interactions (e.g., ratings, watch history) to make personalized recommendations.
+**Reason:** Collaborative filtering leverages historical user-item interactions (e.g., ratings, watch history) to make personalized recommendations.
 
--Importance: It helps identify similar users and suggests movies based on what others with similar tastes have liked, improving user satisfaction and engagement.
+**Importance:** It helps identify similar users and suggests movies based on what others with similar tastes have liked, improving user satisfaction and engagement.
 
 ### Matrix Factorization:
--Reason: Matrix factorization techniques like Singular Value Decomposition (SVD) decompose the user-movie interaction matrix into latent factors, revealing hidden relationships between users and movies.
+**Reason:** Matrix factorization techniques like Singular Value Decomposition (SVD) decompose the user-movie interaction matrix into latent factors, revealing hidden relationships between users and movies.
 
 -Importance: It enables the system to make better predictions, especially in sparse datasets (where many user-movie interactions are missing), enhancing recommendation accuracy.`
 
