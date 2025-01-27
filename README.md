@@ -215,27 +215,32 @@ The hybrid recommendation system effectively combines collaborative and content-
 
 1. **General Top-Rated Genres**
 
-Insights: Users with similar preferences highly rated genres such as Action, Comedy, and Drama, making them the most likely to engage users. Conversely, genres like Film Noir, Western, and Documentary received low ratings, suggesting limited appeal.
-Action: Focus on recommending movies within top-rated genres for better user satisfaction and retention.
+**Insights:** Users with similar preferences highly rated genres such as Action, Comedy, and Drama, making them the most likely to engage users. Conversely, genres like Film Noir, Western, and Documentary received low ratings, suggesting limited appeal.
+
+**Action:** Focus on recommending movies within top-rated genres for better user satisfaction and retention.
 
 2. **Top-Rated Movies**
 
 **Insight:** "The Shawshank Redemption (1994)" is a consistently top-rated movie with at least 50 user ratings, making it an excellent candidate for personalized recommendations to a broad audience.
+
 **Action:** Include highly rated movies in recommendations to address user satisfaction and platform engagement goals.
 
 3. **Average Ratings Per Genre**
 
 **Insight:** Although Action, Comedy, and Drama dominate in popularity, genres like Film Noir and War are highly rated on average despite lower engagement.
+
 **Action:** Promote movies in highly rated niche genres to diversify recommendations and provide tailored suggestions for users who prefer less mainstream content, increasing retention.
 
 4. **Average Movie Ratings Over Time**
 
 **Insight:** The average movie rating has increased steadily, from ~34 in 1995 to ~39 in 2015. This indicates a positive trend in user ratings over time, likely due to improved movie quality or changing user expectations.
+
 **Action:** Highlight trending or newer movies with strong ratings to drive engagement, particularly among users seeking contemporary content.
 
 5. **Best Model for Recommendations**
 
 **Insight:** Matrix Factorization (SVD) outperforms other models like UBCF (User-Based Collaborative Filtering) and IBCF (Item-Based Collaborative Filtering) with the lowest RMSE and MAE, indicating better predictive accuracy. Its higher precision ensures relevant and accurate recommendations.
+
 **Action:** Use SVD as the core algorithm for generating personalized movie recommendations to achieve accuracy, scalability, and improved user satisfaction.
 
 6. **Cold Start Problem**
