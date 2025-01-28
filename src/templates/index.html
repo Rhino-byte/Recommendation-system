@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation App</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/Movies.png') }}"); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            text-align: center;
+            padding: 50px;
+        }
+        form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <style>
+        /* Change the background color of the dropdown */
+        .select2-container .select2-dropdown {
+            background-color: #e0f0ff; /* Light blue background */
+        }
+
+        /* Change the text color of the dropdown items */
+        .select2-results__option {
+            color: #003366; /* Navy blue text */
+        }
+
+        /* Highlighted item when hovered or selected */
+        .select2-results__option--highlighted {
+            background-color: #0066cc; /* Bright blue highlight */
+            color: white; /* White text for contrast */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to the Movie Recommendation App</h1>
+        <p>Enter your details to get personalized recommendations!</p>
+        <form action="/similar-movies" method="POST">
+            <h3>Find Similar Movies</h3>
+            <label for="movie_title">Select Movie:</label><br>
+            <select id="movie_title" name="movie_title" class="select-movie" required>
+                {% for movie_id, title in movies %}
+                <option value="{{ title }}">{{ title }}</option>
+                {% endfor %}
+            </select><br><br>
+            <label for="user_id">User ID (Optional):</label><br>
+            <input type="text" id="user_id" name="user_id"><br><br>
+            <button type="submit">Find Similar Movies</button>
+        </form>
+        
+        
+        <form action="/top-n" method="POST">
+            <label for="user_id">User ID:</label><br>
+            <input type="text" id="user_id" name="user_id" required><br><br>
+            <button type="submit">Get Top Recommendations</button>
+        </form>
+
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.select-movie').select2({
+                placeholder: 'Search for a movie',
+                allowClear: true
+            });
+        });
+    </script>
+</body>
+</html>
